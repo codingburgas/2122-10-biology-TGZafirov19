@@ -4,8 +4,10 @@
 #include <string>
 #include"biohead.h"
 using namespace std;
+int h = 0;
 void mainMenu() {
-    int gender = 0, h = 0;
+    
+    int gender = 0;
     cout << "put in your gender" << endl;
 
     cout << "female - 1       male - 2" << endl << endl;
@@ -19,7 +21,7 @@ void mainMenu() {
 
 
 void bmiCalc() {
-    int h = 0, gender= 0, height =0 , kg = 0;
+    int gender= 0, height =0 , kg = 0;
     if ((h < 50 && gender == 1) || (h < 58 && gender == 2))
     {
         cout << "incorrect input";
