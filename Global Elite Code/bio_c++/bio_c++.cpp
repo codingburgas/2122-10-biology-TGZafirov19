@@ -1,11 +1,14 @@
 #include <iostream>
+#include <windows.h>
 #include "..\libr_proj\biohead.h"
 using namespace std;
 int main()
 {
+    HANDLE k = GetStdHandle(STD_OUTPUT_HANDLE);
     int choice;
+    SetConsoleTextAttribute(k, 10);
     cout << "_____________________________________________" << endl;
-
+    
     cout << "|         What are you here for?            |" << endl;
 
     cout << "|___________________________________________|" << endl;
