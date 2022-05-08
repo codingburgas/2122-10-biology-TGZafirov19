@@ -8,9 +8,10 @@ int h = 0;
 void mainMenu() {
     
     int gender = 0;
-    cout << "Select your gender:" << endl;
 
-    cout << "Female - 1       Male - 2" << endl << endl;
+    cout << endl <<  "             Select your gender  " << endl;
+
+    cout <<          "          Female - 1       Male - 2" << endl << endl;
 
     cin >> gender;
 
@@ -31,23 +32,24 @@ void bmiCalc() {
         if (gender == 1)
         {
             height = 147;
-            kg = 47;
+            kg = 40;
             while (h > height) {
                 height += 2.5;
                 kg++;
             }
-            if (height > 175)kg += 3;
+            if (height > 175)kg += 3.5;
             cout << kg;
         }
         else
         {
             height = 147;
-            kg = 47;
+            kg = 42;
             while (h > height) {
                 height += 1.5;
                 kg++;
+                
             }
-            if (height > 175)kg += 8;
+            if (height > 175)kg += 5.5;
             cout << kg;
         }
     }
