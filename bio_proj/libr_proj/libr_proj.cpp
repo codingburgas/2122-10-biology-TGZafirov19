@@ -8,13 +8,13 @@ int h = 0;
 void mainMenu() {
     
     int gender = 0;
-    cout << "put in your gender" << endl;
+    cout << "Select your gender:" << endl;
 
-    cout << "female - 1       male - 2" << endl << endl;
+    cout << "Female - 1       Male - 2" << endl << endl;
 
     cin >> gender;
 
-    cout << "please enter your height" << endl << endl;
+    cout << "Please enter your height:" << endl << endl;
 
     cin >> h;
 }
@@ -24,7 +24,7 @@ void bmiCalc() {
     int gender= 0, height =0 , kg = 0;
     if ((h < 50 && gender == 1) || (h < 58 && gender == 2))
     {
-        cout << "incorrect input";
+        cout << "Incorrect input";
     }
     else
     {
@@ -59,21 +59,21 @@ void foodCalc() {
 
     cout << endl;
 
-    cout << "Pick food" << endl;
+    cout << "Choose a specific food:" << endl;
 
     cout << endl;
 
-    cout << "1 - Kashkaval " << "    11 - Banan" << "          21 - Kartofi" << endl;
-    cout << "2 - Sirene " << "       12 - Morkovi " << "       22 - Domat" << endl;
-    cout << "3 - Gubi" << "          13 - Agneshki but" << "   23 - Bob" << endl;
-    cout << "4 - Krastavica " << "   14 - Qbulka " << "        24 - Chushki" << endl;
-    cout << "5 - Ananas " << "       15 - Pryasno mlyako" << " 25 - Grah" << endl;
-    cout << "6 - Kiselo mlqko " << " 16 - Bekon" << "          26 - Leshta" << endl;
-    cout << "7 - Skumriq " << "      17 - Oriz " << "          27 - Tikvichka" << endl;
-    cout << "8 - Maslini" << "       18 - Lukanka" << "        28 - Teleshka kayma" << endl;
-    cout << "9 - Skaridi " << "      19 - Pileshko meso " << " 29 - Beltyk" << endl;
-    cout << "10 - Svinsko meso " << "20 - Fustuci" << "        30 - Zhyltyk" << endl << endl;
-
+    cout << " 1 - Yellow Cheeze " << "    11 - Banana" << "     21 - Potatoes" << endl;
+    cout << " 2 - White Cheeze " << "     12 - Carrots " << "   22 - Tomatoes" << endl;
+    cout << " 3 - Mushrooms" << "         13 - Lamb" << "       23 - Beans" << endl;
+    cout << " 4 - Cucumber " << "         14 - Apple " << "     24 - Peppers" << endl;
+    cout << " 5 - Pineapple " << "        15 - Milk" << "       25 - Peas" << endl;
+    cout << " 6 - Yoghurt " << "          16 - Bacon" << "      26 - Lentils" << endl;
+    cout << " 7 - Mackerel " << "         17 - Rice " << "      27 - Pumpkin" << endl;
+    cout << " 8 - Olives" << "            18 - Sausage" << "    28 - Veal" << endl;
+    cout << " 9 - Shrimp " << "           19 - Chicken " << "   29 - Egg white" << endl;
+    cout << "10 - Pork " << "             20 - Peanuts" << "    30 - Yolk" << endl << endl;
+    
     cin >> a;
 
     cout << "How many grams" << endl;
