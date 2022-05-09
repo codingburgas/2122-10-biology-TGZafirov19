@@ -13,26 +13,30 @@ void mainMenu() {
     HANDLE l = GetStdHandle(STD_OUTPUT_HANDLE);
 
     begginig:
-    SetConsoleTextAttribute(l, 13);
-
+    SetConsoleTextAttribute(l, 0xC);
+    system("cls");
     cout << endl <<  "             Select your gender  " << endl;
 
-    SetConsoleTextAttribute(l, 2);
+    SetConsoleTextAttribute(l, 5);
 
-    cout <<          "        Female - 1          Male - 2" << endl << endl;
+    cout << "       Female - 1";
+    SetConsoleTextAttribute(l, 1);
+    cout << "             Male - 2 " << endl << endl;
 
     cin >> gender;
 
     if (gender > 2)
     {
+        SetConsoleTextAttribute(l, 4);
         cout << "Incorrect Input" << endl;
         Sleep(2000);
         system("cls");
         goto begginig;
     }
 
-    SetConsoleTextAttribute(l, 10);
+    SetConsoleTextAttribute(l, 0xB);
 
+    system("cls");
     cout << "Please enter your height:" << endl << endl;
 
     cin >> h;
@@ -88,8 +92,9 @@ void foodCalc() {
     HANDLE l = GetStdHandle(STD_OUTPUT_HANDLE);
 
     int a, b;
+foodChoice:
 
-    foodChoice:
+    system("cls");
     cout << endl;
 
     cout << "Choose a specific food:" << endl;
@@ -135,7 +140,6 @@ void foodCalc() {
     SetConsoleTextAttribute(l, 6);
 
     cout << "10 - Tomato " << "            20 - Brussels sprout" << "    30 - Rice" << endl << endl;
-
 
 
     cin >> a;
