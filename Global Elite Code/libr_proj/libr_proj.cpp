@@ -25,7 +25,7 @@ void mainMenu() {
 
     cin >> gender;
 
-    if (gender > 2)
+    if (gender > 2 || gender < 1)
     {
         SetConsoleTextAttribute(l, 4);
         cout << "Incorrect Input" << endl;
@@ -96,7 +96,7 @@ foodChoice:
 
     system("cls");
     cout << endl;
-
+    SetConsoleTextAttribute(l, 0xF);
     cout << "Choose a specific food:" << endl;
 
     cout << endl;
@@ -156,7 +156,7 @@ foodChoice:
     system("cls");
 
 
-    SetConsoleTextAttribute(l, 10);
+    SetConsoleTextAttribute(l, 9);
 
     cout << "How many grams: ";
 
@@ -166,7 +166,7 @@ foodChoice:
     cout << endl;
     system("cls");
 
-    SetConsoleTextAttribute(l, 10);
+    SetConsoleTextAttribute(l, 7);
 
     cout << "Your kcal - ";
     switch (a)
