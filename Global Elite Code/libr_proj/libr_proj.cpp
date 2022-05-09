@@ -1,41 +1,57 @@
 #include "pch.h"
 #include "framework.h"
-#include<iostream>
+#include <iostream>
 #include <windows.h>
 #include <string>
+#include <stdio.h>
 #include"biohead.h"
 using namespace std;
 int h = 0;
+int gender;
+
 void mainMenu() {
     HANDLE l = GetStdHandle(STD_OUTPUT_HANDLE);
 
-    int gender = 0;
+    begginig:
     SetConsoleTextAttribute(l, 13);
 
     cout << endl <<  "             Select your gender  " << endl;
 
-    cout <<          "          Female - 1 " << SetConsoleTextAttribute(l, 2) << "      Male - 2" << endl << endl;
+    SetConsoleTextAttribute(l, 2);
+
+    cout <<          "        Female - 1          Male - 2" << endl << endl;
 
     cin >> gender;
+
+    if (gender > 2)
+    {
+        cout << "Incorrect Input" << endl;
+        Sleep(2000);
+        system("cls");
+        goto begginig;
+    }
 
     SetConsoleTextAttribute(l, 10);
 
     cout << "Please enter your height:" << endl << endl;
 
     cin >> h;
+    system("cls");
+  
 }
 
 
 void bmiCalc() {
     HANDLE l = GetStdHandle(STD_OUTPUT_HANDLE);
     
-    int gender= 0, height =0 , kg = 0;
+    int height =0 , kg = 0;
     if ((h < 50 && gender == 1) || (h < 58 && gender == 2))
     {
         SetConsoleTextAttribute(l, 4);
         cout << "Incorrect input";
     }
     
+  
     else
     {
         if (gender == 1)
@@ -50,7 +66,7 @@ void bmiCalc() {
             SetConsoleTextAttribute(l, 6);
             cout << "Your perfect body mass is: " << kg << endl << endl;
         }
-        else
+        else if(gender == 2)
         {
             height = 147;
             kg = 42;
@@ -73,6 +89,7 @@ void foodCalc() {
 
     int a, b;
 
+    foodChoice:
     cout << endl;
 
     cout << "Choose a specific food:" << endl;
@@ -85,7 +102,7 @@ void foodCalc() {
 
     SetConsoleTextAttribute(l, 6);
 
-    cout << " 2 - Mashed potato " << "     12 - Red cabbage " <<"       22 - Lemon" << endl;
+    cout << " 2 - Mashed potato " << "     12 - Red cabbage " << "       22 - Lemon" << endl;
 
     SetConsoleTextAttribute(l, 13);
 
@@ -122,25 +139,32 @@ void foodCalc() {
 
 
     cin >> a;
-
+    if (a < 1 || a > 30)
+    {
+        SetConsoleTextAttribute(l, 4);
+        cout << "Incorrect Input!" << endl;
+        Sleep(2000);
+        system("cls");
+        goto foodChoice;
+    }
+    
     cout << endl;
+    system("cls");
 
 
     SetConsoleTextAttribute(l, 10);
 
-    cout << "How many grams: " ;
+    cout << "How many grams: ";
 
 
     cin >> b;
-    
+
     cout << endl;
+    system("cls");
 
     SetConsoleTextAttribute(l, 10);
 
     cout << "Your kcal - ";
-
-
-
     switch (a)
     {
 
@@ -204,7 +228,7 @@ void foodCalc() {
     case 29: cout << b * 2.39; break;
 
     case 30: cout << b * 1.3; break;
-
     }
     cout << endl << endl;
+    
 }
